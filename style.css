@@ -29,3 +29,80 @@ ol {
 body {
 	font-family: "Lato", sans-serif;
 }
+
+/* LAYOUT */
+
+.app {
+    height: 100vh;
+    width: 100%;
+}
+
+.hero {
+    width: 100%;
+    height: 100%;
+}
+
+.flex {
+    display: flex;
+}
+
+.sidebar {
+    display: none;
+    height: 100%;
+}
+
+.chat {
+    height: 100%;
+    width: 100%;
+}
+
+/* DEBUG */
+
+.debug .app {
+    border: 1px solid black;
+    background-color: #DBDBD3;
+}
+
+.debug .hero {
+    border: 1px solid blue;
+    background-color: white;
+} 
+
+.debug .sidebar {
+    border: 1px solid red;
+    background-color: rgb(214, 103, 103);
+}
+
+.debug .chat {
+    border: 1px solid purple;
+    background-color: rgb(148, 101, 148);
+}
+
+/* MEDIA QUERY */
+
+@media (min-width: 768px) {
+    .sidebar {
+        display: flex;
+        flex-shrink: 0;
+        width: 80px;
+    }
+
+    .chat {
+        flex-shrink: 1;
+    }
+}
+
+@media (min-width: 992px) {
+    .app{
+        padding: 30px 0px;
+    }
+
+    .hero {
+        width: 80%;
+        margin: 0 auto;
+    }
+
+    .sidebar {
+        width: 380px;
+    }
+}
