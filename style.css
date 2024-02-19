@@ -56,6 +56,65 @@ body {
     width: 100%;
 }
 
+.card {
+    padding: 10px;
+}
+
+.card-body:not(.user .card-body){
+    padding: 5px;
+    flex-grow: 1;
+}
+/* SIDEBAR */
+
+.profile {
+    background-color: #c6c5c5;
+}
+
+.sidebar .row {
+    flex-direction: column;
+    width: 100%;
+}
+
+.user,
+.friend {
+    width: 100%;
+}
+
+.user {
+    justify-content: space-between;
+    align-items: center;
+}
+
+.notify {
+    background-color: #8EDAFC;
+}
+
+.bell {
+    width: 50px;
+    aspect-ratio: 1/1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    background-color: white;
+}
+
+.bell i {
+    color: #8EDAFC;
+}
+
+.user img,
+.friend img {
+    aspect-ratio: 1/1;
+    width: 50px;
+    border-radius: 50%;
+    object-fit: contain;
+}
+
+.friend .name {
+    justify-content: space-between;
+}
+
 /* DEBUG */
 
 .debug .app {
@@ -78,6 +137,10 @@ body {
     background-color: rgb(148, 101, 148);
 }
 
+.debug .sidebar .row > * {
+    border: 1px dashed black;
+}
+
 /* MEDIA QUERY */
 
 @media (min-width: 768px) {
@@ -88,7 +151,13 @@ body {
     }
 
     .chat {
-        flex-shrink: 1;
+        flex-grow: 1;
+    }
+
+    .card-body,
+    .notify,
+    .search {
+        display: none;
     }
 }
 
@@ -104,5 +173,11 @@ body {
 
     .sidebar {
         width: 380px;
+    }
+
+    .card-body,
+    .notify,
+    .search {
+        display: block;
     }
 }
