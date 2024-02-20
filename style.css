@@ -64,6 +64,11 @@ body {
     padding: 5px 10px;
     flex-grow: 1;
 }
+
+.chat {
+    flex-direction: column;
+    overflow: hidden;
+}
 /* SIDEBAR */
 
 .profile {
@@ -146,10 +151,63 @@ body {
 }
 
 .time,
-.last-message {
+.card-subheading {
     color: lightgray;
 }
 
+/* main chat section */
+
+.chat-tools {
+    display: flex;
+    gap: 15px;
+    margin-left: auto;
+    color: #a5a5a5;
+    font-size: 20px;
+}
+
+.chat .user {
+    justify-content: flex-start;
+}
+
+.chat .headshot {
+    padding-right: 10px;
+}
+
+/* CHAT-WINDOW */
+
+.chat-window {
+    flex-grow: 1;
+    background-image: url(./img/mine.jpg);
+    overflow: auto;
+}
+/* input-bar */
+
+.input-bar.card {
+    background-color: #EAEAEA;
+}
+
+.input-content {
+    width: 100%;
+    align-items: center;
+    overflow: hidden;
+}
+
+.input-message {
+    flex-grow: 1;
+    color: #a5a5a5;
+    background-color: white;
+    padding: 15px;
+}
+
+.input-bar i {
+    font-size: 30px;
+    color: #a5a5a5;
+    padding: 0px 20px;
+}
+
+.emoji, .input-audio {
+    flex-shrink: 0;
+}
 /* DEBUG */
 
 .debug .app {
@@ -189,14 +247,14 @@ body {
         flex-grow: 1;
     }
 
-    .card-body,
-    .notify,
-    .search {
+    .sidebar .card-body, 
+    .sidebar .notify,
+    .sidebar .search  {
         display: none;
     }
 }
 
-@media (min-width: 992px) {
+@media (min-width: 1200px) {
     .app{
         padding: 30px 0px;
     }
@@ -210,9 +268,9 @@ body {
         width: 380px;
     }
 
-    .card-body,
-    .notify,
-    .search {
+    .sidebar .card-body, 
+    .sidebar .notify,
+    .sidebar .search  {
         display: block;
     }
 
