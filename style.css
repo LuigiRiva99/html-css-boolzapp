@@ -179,6 +179,49 @@ body {
     flex-grow: 1;
     background-image: url(./img/mine.jpg);
     overflow: auto;
+    padding: 10px 30px;
+}
+
+.chat-window li {
+    max-width: 480px;
+}
+
+.messages {
+    flex-direction: column;
+    gap: 15px;
+}
+
+.chat-window .message {
+    padding: 15px;
+    padding-right: 50px;
+    border-radius: 10px;
+    position: relative;
+} 
+
+.sent {
+    background-color: #DEF8C0;
+    align-self: flex-end;
+}
+
+.received {
+    background-color: white;
+    align-self: flex-start;
+}
+
+.message-arrow, .message-time {
+    position: absolute;
+    color: lightgray;
+}
+
+.message-arrow {
+    top: 5px;
+    right: 15px;
+}
+
+.message-time {
+    bottom: 5px;
+    right: 5px;
+    font-size: 13px;
 }
 /* input-bar */
 
