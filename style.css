@@ -258,11 +258,16 @@ input {
     flex-grow: 1;
     color: #a5a5a5;
     background-color: white;
-    padding: 15px;
+}
+
+.input-message input {
+    width: 100%;
+    padding: 10px;
+    outline: none;
 }
 
 .input-bar i {
-    font-size: 30px;
+    font-size: 20px;
     color: #a5a5a5;
     padding: 0px 20px;
 }
@@ -311,7 +316,7 @@ input {
 
     .sidebar .card-body, 
     .sidebar .notify,
-    .sidebar .search  {
+    .sidebar .search-bar  {
         display: none;
     }
 }
@@ -332,7 +337,7 @@ input {
 
     .sidebar .card-body, 
     .sidebar .notify,
-    .sidebar .search  {
+    .sidebar .search-bar  {
         display: block;
     }
 
