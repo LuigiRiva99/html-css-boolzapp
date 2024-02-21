@@ -30,6 +30,11 @@ body {
 	font-family: "Lato", sans-serif;
 }
 
+input {
+	border: none;
+	background: transparent;
+}
+
 /* LAYOUT */
 
 .app {
@@ -109,21 +114,34 @@ body {
     color: #8EDAFC;
 }
 
+/* SEARCH-BAR */
 .search {
     background-color: lightgray;
 }
 
-.search i {
-    font-size: 15px;
-    color: #a5a5a5;
-    padding: 0px 20px;
+.search-bar input {
+    width: 100%;
+    height: 30px;
+    padding-left: 50px;
+	padding-right: 10px;
+    background-color: white;
+    outline: none;
+}
+.search-bar {
+    position: relative;
+    margin: 10px 0px;
 }
 
-.search-bar {
-    background-color: white;
-    color: #a5a5a5;
-    padding: 5px 0px;
+.search-bar i {
+	position: absolute;
+	top: 50%;
+	left: 20px;
+	color: #b1b1b1;
+	transform: translateY(-50%);
+	pointer-events: none;
+	font-size: 20px;
 }
+
 
 .user img,
 .friend img {
@@ -144,6 +162,7 @@ body {
 .friend-list {
     flex-grow: 1;
     overflow: auto;
+    background-color: white;
 }
 
 .friend {
